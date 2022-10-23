@@ -1,0 +1,28 @@
+.features {
+    & .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        width: 100%;
+
+        & .item {
+            width: 354px;
+            height: 251px;
+
+            @media screen and(max-width:1599) {
+                margin-top: 15px;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 60px;
+                }
+            }
+
+            & .title,
+            & .text {
+                text-align: left;
+            }
+        }
+    }
+}

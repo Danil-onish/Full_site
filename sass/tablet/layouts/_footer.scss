@@ -1,0 +1,31 @@
+.page-footer {
+
+    & .wrapper-tablet {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        @media screen and (max-width:1599px) {
+            & .socials-block {
+                margin-left: 165px;
+            }
+        }
+    }
+
+    & .form-block {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .form-block {
+        margin-bottom: 60px;
+
+        & .input {
+            width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+}

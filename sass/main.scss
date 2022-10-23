@@ -1,0 +1,18 @@
+@import "./utils/vars";
+@import "./utils/zero_styles";
+@import "./base/fonts_general";
+@import "./base/components/container";
+@import "./mobile/components/button";
+
+@media screen and (min-width: 0px) {
+    @import "./mobile/main-mobile";
+}
+
+@media screen and (min-width: 768px) {
+    @import "./tablet/main-tablet";
+}
+
+@media screen and (min-width: 1600px) {
+    @import "./desktop/main-desktop";
+    
+}

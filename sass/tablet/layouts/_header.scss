@@ -1,0 +1,53 @@
+.page-header {
+    & .container {
+        justify-content: center;
+    }
+
+    & .wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    & .menu-icon {
+        display: none;
+    }
+
+    & .header-nav .list {
+        display: flex;
+        margin-left: 86px;
+        margin-right: 86px;
+
+
+        & .item+.item {
+            margin-left: 50px;
+        }
+    }
+
+    & .header-contacts {
+
+        & .item {
+            display: flex;
+
+            & .icon {
+                display: block;
+                margin-right: 8px;
+                fill: #757575;
+            }
+
+            &:hover,
+            &:focus {
+                & .text {
+                    color: $accent-color;
+                }
+
+                & .icon {
+                    fill: $accent-color;
+                }
+            }
+        }
+
+        & .item+.item {
+            margin-top: 10px;
+        }
+    }
+}

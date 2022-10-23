@@ -1,0 +1,45 @@
+.page-footer {
+
+    & .container {
+        display: flex;
+    }
+
+    & .addresses-block {
+
+        & .logo {
+            justify-content: left;
+        }
+
+        & .text {
+            text-align: left;
+        }
+    }
+
+    & .socials-block {
+        & .title {
+            text-align: left;
+        }
+
+        margin-left: 84px;
+        margin-right: 93px;
+    }
+
+    & .form-block {
+        & .title {
+            text-align: left;
+        }
+
+        & .wrapper {
+            display: flex;
+            & .input {
+                margin-right: 12px;
+                width: 358px;
+            }
+
+            & .submit-btn{
+                margin-top: 20px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,33 @@
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.list {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px;
+
+    list-style: none;
+}
+
+.text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.link {
+    text-decoration-line: none;
+}
+
+.title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px;
+}

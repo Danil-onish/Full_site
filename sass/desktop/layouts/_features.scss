@@ -1,0 +1,10 @@
+.features {
+    & .list {
+        margin-bottom: 94px;
+
+        & .item {
+            width: 270px;
+            height: 251px;
+        }
+    }
+}

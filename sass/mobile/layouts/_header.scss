@@ -1,0 +1,28 @@
+.page-header {
+
+    & .wrapper {
+        display: none;
+    }
+
+    & .container {
+        position: relative;
+        display: flex;
+        height: 60px;
+    }
+
+    & .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & .close-menu-icon,
+    & .menu-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translate(0, -50%);
+
+    }
+
+}

@@ -1,0 +1,19 @@
+.our_team {
+    & .container>.title {
+        margin-bottom: 15px;
+    }
+
+    & .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 45px;
+    }
+
+    & .cards>.item {
+        width: 354px;
+        height: 536px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

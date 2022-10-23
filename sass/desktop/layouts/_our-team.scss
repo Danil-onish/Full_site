@@ -1,0 +1,16 @@
+.our_team {
+    & .container>.title {
+        margin-bottom: 50px;
+    }
+
+    & .cards {
+        margin-bottom: 94px;
+    }
+
+    & .cards>.item {
+        width: 270px;
+        height: 428px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

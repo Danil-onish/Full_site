@@ -1,0 +1,71 @@
+.our_team {
+    // display: none;
+    background-color: #F5F4FA;
+
+    & .container>.title {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    & .cards>.item {
+        max-width: 100%;
+
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+
+        & img {
+            width: 100%;
+        }
+
+        @media screen and(max-width:767px) {
+            &+.item {
+                margin-top: 30px;
+            }
+
+            &:last-child {
+                margin-bottom: 60px;
+            }
+
+            padding-bottom: 24px;
+        }
+
+
+        & .title,
+        & .text {
+            text-align: center;
+        }
+
+        & .title {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        & .icon-list {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+
+            & .team-socials-icon {
+                width: 44px;
+                height: 44px;
+                border: solid 1px transparent;
+                border-radius: 50%;
+                fill: #afb1b8;
+            }
+
+            & .team-socials-icon:hover,
+            & .team-socials-icon:focus {
+                background-color: $accent-color;
+                fill: #fff;
+
+            }
+
+            & .item+.item {
+                margin-left: 10px;
+            }
+        }
+    }
+}

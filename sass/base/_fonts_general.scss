@@ -1,0 +1,154 @@
+body {
+    font-family: $primary-font-family;
+    font-weight: $primary-font-weight;
+    // font-size: $primary-font-size;
+}
+
+.title {
+    color: $primary-title-color;
+}
+
+.text {
+    color: $primary-text-color;
+}
+
+.section .container>.title {    
+    // font-size: 36px;
+    font-weight: 700;
+    // line-height: 1.167;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.page-header {
+
+    & .header-nav .link,
+    & .header-contacts .text {
+        font-weight: 500;
+        // line-height: 1.17;
+        letter-spacing: 0.02em;
+
+        color: $primary-title-color;
+
+        &:hover,
+        &:focus{
+            color: $accent-color;
+        }
+    }
+
+    & .header-contacts .text {
+        color: $primary-text-color;
+    }
+}
+
+.hero {
+    text-align: center;
+
+    & .title {
+        // font-size: 44px;
+        font-weight: 900;
+        // line-height: 1.36;
+        letter-spacing: 0.06em;
+
+        color: $white-font-color;
+    }
+
+    & .link {
+        // font-size: 16px;
+        font-weight: 700;
+        // line-height: 1.875;
+        letter-spacing: 0.06em;
+
+        color: $white-font-color;
+    }
+}
+
+.features {
+    & .title {
+        // font-size: 14px;
+        font-weight: 700;
+        // line-height: 1.14;
+        letter-spacing: 0.03em;
+    }
+
+    & .text {
+        // line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+}
+
+.our_work .container{
+    &>.title {
+        // font-size: 36px;
+        font-weight: 700;
+        // line-height: 1.167;
+        letter-spacing: 0.03em;
+    }
+
+    & .list .title {
+        // font-size: 14px;
+        font-weight: 700;
+        // line-height: 1.14;
+        letter-spacing: 0.03em;
+
+        color: $white-font-color;
+    }
+}
+
+.our_team {
+    & .item .title {
+        // font-size: 16px;
+        font-weight: 500;
+        // line-height: 1.1875;
+        letter-spacing: 0.03em;
+    }
+
+    & .item .text {
+        // font-size: 16px;
+        // line-height: 1.1875;
+        letter-spacing: 0.03em;
+    }
+}
+
+.page-footer {
+
+    & .addresses .text {
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        opacity: 0.6;
+        text-align: center;
+
+        color: $white-font-color;
+
+        &.special {
+            opacity: 1;
+        }
+    }
+
+    & .title {
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.page-footer .form {
+
+    & .input::placeholder {
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-align: left;
+
+        color: $white-font-color;
+        opacity: 0.6;
+    }
+
+    & .submit-btn {
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-align: center;
+
+        color: $white-font-color;
+    }
+}
