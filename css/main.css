@@ -245,7 +245,7 @@ body {
   }
   .hero {
     position: relative;
-    background-image: url(./images/Header-mobile\ img.jpg);
+    background-image: url(../../images/Header-mobile\ img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(47, 48, 58, 0.4);
@@ -597,7 +597,7 @@ body {
     margin-top: 10px;
   }
   .hero {
-    background-image: url(./images/Header-tablet\ img.jpg);
+    background-image: url(../../images/Header-tablet\ img.jpg);
   }
   .hero .container {
     max-width: 360px;
@@ -759,7 +759,7 @@ body {
     margin-left: 30px;
   }
   .hero {
-    background-image: url(././images/Header-desktop\ img.jpg);
+    background-image: url(../../images/Header-desktop\ img.jpg);
     height: 600px;
   }
   .hero .container {
