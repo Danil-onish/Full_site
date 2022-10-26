@@ -16,25 +16,19 @@
     <link rel="stylesheet" href="dist/css/main.min.css">
 </head>
 
-<body>
+<body id="body">
     <header class="page-header">
         <div class="container">
-
             <a class="logo" href="">
                 <svg class="logo-icon" width="134" height="28">
                     <use href="./images/sprite.svg#icon-WebStudio-logo-icon"></use>
                 </svg>
             </a>
-
-            <svg class="menu-icon" width="40" height="40">
+            <svg class="menu-icon" onclick="toggle_burger(true)" width="40" height="40">
                 <use href="./images/sprite.svg#icon-mobile-menu-icon"></use>
             </svg>
-            <svg class="close-menu-icon" width="40" height="40" style="display: none;">
-                <use href="./images/sprite.svg#icon-close-icon"></use>
-            </svg>
 
-
-            <div class="wrapper">
+            <div class="wrapper" id="burger-menu">
                 <nav class="header-nav">
                     <ul class="list">
                         <li class="item">
@@ -62,6 +56,25 @@
                         <p class="text"><i class="phone icon"></i>+38 096 111 11 11</p>
                     </li>
                 </ul>
+
+                <ul class="addition-socials list">
+                    <li class="item">
+                        <a class="link" href="">Instagram</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="">Twitter</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="">Facebook</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="">LinkedIn</a>
+                    </li>
+                </ul>
+
+                <svg class="close-menu-icon" onclick="toggle_burger(false)" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-close-icon"></use>
+                </svg>
             </div>
         </div>
     </header>
@@ -298,66 +311,82 @@
     </section>
     <footer class="page-footer">
         <div class="container">
-            <div class="wrapper-tablet">
-                <div class="addresses-block">
-                    <a class="logo" href="">
-                        <svg class="logo-icon" width="154" height="28">
-                            <use href="./images/sprite.svg#icon-WebStudio-logo-icon"></use>
-                        </svg>
-                    </a>
-                    <p class="text special">г. Киев, пр-т Леси Украинки, 26</p>
-                    <p class="text">info@example.com</p>
-                    <p class="text">+38 099 111 11 11</p>
-                </div>
-                <div class="socials-block">
-                    <h3 class="title">присоединяйтесь</h3>
-                    <ul class="list">
-                        <li class="item">
-                            <a class="link" href="">
-                                <svg class="footer-social-icons" width="44" height="44">
-                                    <use href="./images/sprite.svg#icon-instagram-icon"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a class="link" href="">
-                                <svg class="footer-social-icons" width="44" height="44">
-                                    <use href="./images/sprite.svg#icon-twitter-icon"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a class="link" href="">
-                                <svg class="footer-social-icons" width="44" height="44">
-                                    <use href="./images/sprite.svg#icon-facebook-icon"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a class="link" href="">
-                                <svg class="footer-social-icons" width="44" height="44">
-                                    <use href="./images/sprite.svg#icon-in-icon"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="form-block">
-                <form class="form js-speaker-form" autocomplete="off">
-                    <h3 class="title">Подпишитесь на рассылку</h3>
-                    <div class="wrapper">
-                        <input type="email" class="input" name="Email" placeholder="Email" autocomplete="email">
-                        <button class="submit-btn button" type="submit">Подписаться
-                            <svg class="letter icon" width="24" height="24">
-                                <use href="./images/sprite.svg#icon-send-icon"></use>
+            <div class="wrapper-desktop">
+                <div class="wrapper-tablet">
+                    <div class="addresses-block">
+                        <a class="logo" href="">
+                            <svg class="logo-icon" width="154" height="28">
+                                <use href="./images/sprite.svg#icon-WebStudio-logo-icon"></use>
                             </svg>
-                        </button>
+                        </a>
+                        <p class="text special">г. Киев, пр-т Леси Украинки, 26</p>
+                        <p class="text">info@example.com</p>
+                        <p class="text">+38 099 111 11 11</p>
                     </div>
-                </form>
+                    <div class="socials-block">
+                        <h3 class="title">присоединяйтесь</h3>
+                        <ul class="list">
+                            <li class="item">
+                                <a class="link" href="">
+                                    <svg class="footer-social-icons" width="44" height="44">
+                                        <use href="./images/sprite.svg#icon-instagram-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a class="link" href="">
+                                    <svg class="footer-social-icons" width="44" height="44">
+                                        <use href="./images/sprite.svg#icon-twitter-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a class="link" href="">
+                                    <svg class="footer-social-icons" width="44" height="44">
+                                        <use href="./images/sprite.svg#icon-facebook-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a class="link" href="">
+                                    <svg class="footer-social-icons" width="44" height="44">
+                                        <use href="./images/sprite.svg#icon-in-icon"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-block">
+                    <form class="form js-speaker-form" autocomplete="off">
+                        <h3 class="title">Подпишитесь на рассылку</h3>
+                        <div class="wrapper">
+                            <input type="email" class="input" name="Email" placeholder="Email" autocomplete="email">
+                            <button class="submit-btn button" type="submit">Подписаться
+                                <svg class="letter icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-send-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggle_burger(open) {
+            var burger = document.getElementById("burger-menu");
+            var body = document.getElementById("body");
+            if (open) {
+                burger.classList.add("open")
+                body.classList.add("overflow")
+            } else {
+                burger.classList.remove("open")
+                body.classList.remove("overflow")
+            }
+        }
+    </script>
 
     <script>
         (() => {

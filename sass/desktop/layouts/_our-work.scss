@@ -12,11 +12,12 @@
 
         & .item {
             position: relative;
+            display: flex;
 
             & .title {
                 display: flex;
                 position: absolute;
-                bottom: 5px;
+                bottom: 0;
                 left: 50%;
                 transform: translate(-50%, 0);
 

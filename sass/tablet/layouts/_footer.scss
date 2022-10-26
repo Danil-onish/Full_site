@@ -2,25 +2,22 @@
 
     & .wrapper-tablet {
         display: flex;
-        justify-content: center;
-        margin-top: 60px;
-        margin-bottom: 60px;
+        justify-content: space-around;
 
         @media screen and (max-width:1599px) {
-            & .socials-block {
-                margin-left: 165px;
-            }
+            margin-top: 60px;
+            margin-bottom: 60px;
+
         }
     }
 
     & .form-block {
-        margin-top: 60px;
-        margin-bottom: 60px;
-    }
 
-    .form-block {
-        margin-bottom: 60px;
+        @media screen and (max-width:1599px) {
+            margin-bottom: 60px;
 
+        }
+        
         & .input {
             width: 450px;
             margin-left: auto;

@@ -1,7 +1,17 @@
 .page-footer {
 
     & .container {
-        display: flex;
+        & .wrapper-desktop {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        & .wrapper-tablet {
+            justify-content: space-between;
+            width: 496px;
+        }
     }
 
     & .addresses-block {
@@ -19,9 +29,6 @@
         & .title {
             text-align: left;
         }
-
-        margin-left: 84px;
-        margin-right: 93px;
     }
 
     & .form-block {
@@ -31,12 +38,13 @@
 
         & .wrapper {
             display: flex;
+
             & .input {
                 margin-right: 12px;
                 width: 358px;
             }
 
-            & .submit-btn{
+            & .submit-btn {
                 margin-top: 20px;
             }
         }
