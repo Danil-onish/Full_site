@@ -30,6 +30,10 @@ body {
 
         color: $primary-title-color;
 
+        transition: linear;
+        transition-property: color;
+        transition-duration: 250ms;
+
         &:hover,
         &:focus{
             color: $accent-color;

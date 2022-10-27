@@ -17,6 +17,49 @@
 </head>
 
 <body id="body">
+    <div class="modal" id="modal">
+        <div class="wrapper">
+            <form class="js-speaker-form">
+                <svg class="close-modal-icon" onclick="toggle_modal(false)" width="30" height="30">
+                    <use href="./images/sprite.svg#icon-close-icon"></use>
+                </svg>
+                <h1 class="title">Оставьте свои данные, мы вам перезвоним</h1>
+                <div class="wrapper">
+                    <input type="text" name="Name">
+                    <svg class="input-icon" width="18" height="18">
+                        <use href="./images/sprite.svg#icon-avatar-icon"></use>
+                    </svg>
+                    <label class="name-label">Имя</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="text" name="Phone number">
+                    <svg class="input-icon" width="18" height="18">
+                        <use href="./images/sprite.svg#icon-phone-icon"></use>
+                    </svg>
+                    <label class="phone-label-number">Телефон</label>
+                </div>
+
+                <div class="wrapper">
+                    <input type="email" name="Email">
+                    <svg class="input-icon" width="18" height="18">
+                        <use href="./images/sprite.svg#icon-envelope-black-icon"></use>
+                    </svg>
+                    <label class="email-label">Почта</label>
+                </div>
+                <div class="wrapper">
+                    <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Введите текст"></textarea>
+                    <label class="comment-label" for="comment">Комментарий </label>
+                </div>
+                <input class="standart-checkbox" type="checkbox" id="agreement-check">
+                <label class="agreement-label" for="agreement-check">
+                    <span class="checkbox"></span><p>Соглашаюсь с рассылкой и принимаю <a class="link" href="">Условия договора</a></p>                
+                </label>
+                <button class="submit-btn button" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
     <header class="page-header">
         <div class="container">
             <a class="logo" href="">
@@ -32,7 +75,7 @@
                 <nav class="header-nav">
                     <ul class="list">
                         <li class="item">
-                            <a class="link" href="">Студия</a>
+                            <a class="link special" href="">Студия</a>
                         </li>
                         <li class="item">
                             <a class="link" href="">Портфолио</a>
@@ -43,13 +86,13 @@
                     </ul>
                 </nav>
                 <ul class="header-contacts list">
-                    <li class="item">
+                    <li class="item" onclick="toggle_modal(true)">
                         <svg class="icon" width="14" height="14">
                             <use href="./images/sprite.svg#icon-envelope-icon"></use>
                         </svg>
                         <p class="text"><i class="mail icon"></i>info@devstudio.com</p>
                     </li>
-                    <li class="item">
+                    <li class="item" onclick="toggle_modal(true)">
                         <svg class="icon" width="14" height="14">
                             <use href="./images/sprite.svg#icon-smartphone-icon"></use>
                         </svg>
@@ -383,6 +426,18 @@
                 body.classList.add("overflow");
             } else {
                 burger.classList.remove("open");
+                body.classList.remove("overflow");
+            }
+        }
+
+        function toggle_modal(open) {
+            var modal = document.getElementById("modal");
+            var body = document.getElementById("body");
+            if (open) {
+                modal.classList.add("open")
+                body.classList.add("overflow");
+            } else {
+                modal.classList.remove("open");
                 body.classList.remove("overflow");
             }
         }

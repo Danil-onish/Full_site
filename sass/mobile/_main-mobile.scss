@@ -9,3 +9,9 @@
 @import "./layouts/our-team";
 @import "./layouts/regular-clients";
 @import "./layouts/footer";
+
+@media screen and(max-width:767px) {
+    body.overflow {
+        overflow: hidden;
+    }
+}

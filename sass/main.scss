@@ -4,10 +4,7 @@
 @import "./base/components/container";
 @import "./base/components/button";
 @import "./base/components/icon";
-
-body.overflow {
-    overflow: hidden;
-}
+@import "./base/components/modal";
 
 @media screen and (min-width: 0px) {
     @import "./mobile/main-mobile";

@@ -54,6 +54,9 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: linear;
+  transition-property: color;
+  transition-duration: 250ms;
 }
 .page-header .header-nav .link:hover, .page-header .header-nav .link:focus, .page-header .header-contacts .text:hover, .page-header .header-contacts .text:focus {
   color: #2196F3;
@@ -182,8 +185,120 @@ body {
   transition-duration: 250ms;
 }
 
-body.overflow {
-  overflow: hidden;
+.modal {
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  max-width: 450px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: linear;
+  transition-property: top, transform;
+  transition-duration: 250ms;
+}
+.modal.open {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal > .wrapper {
+  position: relative;
+  padding: 40px;
+}
+.modal > .wrapper .close-modal-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.modal > .wrapper .close-modal-icon:hover, .modal > .wrapper .close-modal-icon:focus {
+  fill: #2196F3;
+}
+.modal > .wrapper .title {
+  margin-bottom: 12px;
+}
+.modal > .wrapper .wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.modal > .wrapper .wrapper + .wrapper {
+  margin-top: 10px;
+}
+.modal > .wrapper .wrapper label {
+  margin-bottom: 4px;
+}
+.modal > .wrapper .wrapper input, .modal > .wrapper .wrapper textarea {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: 0;
+  transition: linear;
+  transition-property: border-color;
+  transition-duration: 250ms;
+}
+.modal > .wrapper .wrapper input:focus, .modal > .wrapper .wrapper textarea:focus {
+  border-color: #2196F3;
+}
+.modal > .wrapper .wrapper input:focus ~ .input-icon, .modal > .wrapper .wrapper textarea:focus ~ .input-icon {
+  fill: #2196F3;
+}
+.modal > .wrapper .wrapper input:focus ~ label, .modal > .wrapper .wrapper textarea:focus ~ label {
+  color: #2196F3;
+}
+.modal > .wrapper .wrapper textarea {
+  padding-left: 12px;
+}
+.modal > .wrapper .wrapper .input-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  z-index: 8;
+  transition: linear;
+  transition-property: fill;
+  transition-duration: 250ms;
+}
+.modal > .wrapper textarea {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  min-height: 120px;
+}
+.modal > .wrapper input.standart-checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+}
+.modal > .wrapper input.standart-checkbox:checked + .agreement-label .checkbox {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+.modal > .wrapper .agreement-label {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.modal > .wrapper .agreement-label .checkbox {
+  background-image: url("../../../images/check_mark-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-width: 16px;
+  min-height: 16px;
+  margin-right: 8px;
+  border: solid 2px #212121;
+  border-radius: 2px;
 }
 
 @media screen and (min-width: 0px) {
@@ -242,6 +357,56 @@ body.overflow {
   .page-footer .form-block .submit-btn {
     font-size: 16px;
     line-height: 1.875;
+  }
+  .modal > .wrapper .title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .modal > .wrapper label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #757575;
+  }
+  .modal > .wrapper label .link {
+    color: #2196F3;
+    text-decoration: none;
+  }
+  .modal > .wrapper label .link:hover, .modal > .wrapper label .link:focus {
+    text-decoration: underline;
+  }
+  .modal > .wrapper input::-moz-placeholder, .modal > .wrapper textarea::-moz-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+  .modal > .wrapper input:-ms-input-placeholder, .modal > .wrapper textarea:-ms-input-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+  .modal > .wrapper input, .modal > .wrapper input::placeholder, .modal > .wrapper textarea::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+  .modal > .wrapper .submit-btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
   }
   .container {
     max-width: 480px;
@@ -579,6 +744,11 @@ body.overflow {
     margin-left: 10px;
   }
 }
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  body.overflow {
+    overflow: hidden;
+  }
+}
 @media screen and (min-width: 768px) {
   h2 {
     font-size: 28px;
@@ -587,6 +757,21 @@ body.overflow {
   .page-header .header-nav .link {
     font-size: 14px;
     line-height: 1.14;
+  }
+  .page-header .header-nav .link.special {
+    position: relative;
+    color: #2196F3;
+  }
+  .page-header .header-nav .link.special::after {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196F3;
   }
   .page-header .header-contacts .text {
     font-size: 12px;
