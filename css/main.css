@@ -187,10 +187,10 @@ body {
 
 .modal {
   position: fixed;
+  transform: translate(-50%, -50%);
   left: 50%;
   top: -100%;
-  transform: translate(-50%, -50%);
-  z-index: 7;
+  z-index: 35;
   max-width: 450px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -200,8 +200,8 @@ body {
   transition-duration: 250ms;
 }
 .modal.open {
-  top: 50%;
   transform: translate(-50%, -50%);
+  top: 50%;
 }
 .modal > .wrapper {
   position: relative;
@@ -512,19 +512,23 @@ body {
   }
 }
 @media screen and (min-width: 0px) {
-  .hero {
+  .bg-img-wrapper {
     position: relative;
-    background-image: url(../../images/Header-mobile\ img.jpg);
+    background-image: url(../../images/hero-bg-mobile\ img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(47, 48, 58, 0.4);
     height: 400px;
   }
-  .hero .container {
+  .bg-img-wrapper .hero {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 48, 58, 0.4);
+  }
+  .bg-img-wrapper .hero .container {
     max-width: 360px;
     height: 164px;
   }
-  .hero .title {
+  .bg-img-wrapper .hero .title {
     margin-top: 118px;
     margin-bottom: 30px;
   }
@@ -744,8 +748,23 @@ body {
     margin-left: 10px;
   }
 }
+@media screen and (min-width: 0px) {
+  body.overflow-modal {
+    overflow: hidden;
+  }
+  body.overflow-modal::after {
+    content: "";
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
 @media screen and (min-width: 0px) and (max-width: 767px) {
-  body.overflow {
+  body.overflow-burger {
     overflow: hidden;
   }
 }
@@ -861,10 +880,10 @@ body {
   .page-header .header-contacts .item + .item {
     margin-top: 10px;
   }
-  .hero {
-    background-image: url(../../images/Header-tablet\ img.jpg);
+  .bg-img-wrapper {
+    background-image: url(../../images/hero-bg-tablet\ img.jpg);
   }
-  .hero .container {
+  .bg-img-wrapper .hero .container {
     max-width: 360px;
     min-width: 360px;
     height: 164px;
@@ -1015,16 +1034,16 @@ body {
     margin-top: 0;
     margin-left: 30px;
   }
-  .hero {
-    background-image: url(../../images/Header-desktop\ img.jpg);
+  .bg-img-wrapper {
+    background-image: url(../../images/hero-bg-desktop\ img.jpg);
     height: 600px;
   }
-  .hero .container {
+  .bg-img-wrapper .hero .container {
     max-width: 696px;
     min-width: 696px;
     height: 200px;
   }
-  .hero .title {
+  .bg-img-wrapper .hero .title {
     margin-top: 200px;
   }
   .features .list {

@@ -1,14 +1,16 @@
-.hero {
-    background-image: url(../../images/Header-desktop\ img.jpg);
+.bg-img-wrapper {
+    background-image: url(../../images/hero-bg-desktop\ img.jpg);
     height: 600px;
 
-    & .container {
-        max-width: 696px;
-        min-width: 696px;
-        height: 200px;
-    }
+    & .hero {
+        & .container {
+            max-width: 696px;
+            min-width: 696px;
+            height: 200px;
+        }
 
-    & .title {
-        margin-top: 200px;
+        & .title {
+            margin-top: 200px;
+        }
     }
 }

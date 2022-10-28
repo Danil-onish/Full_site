@@ -53,7 +53,8 @@
                 </div>
                 <input class="standart-checkbox" type="checkbox" id="agreement-check">
                 <label class="agreement-label" for="agreement-check">
-                    <span class="checkbox"></span><p>Соглашаюсь с рассылкой и принимаю <a class="link" href="">Условия договора</a></p>                
+                    <span class="checkbox"></span>
+                    <p>Соглашаюсь с рассылкой и принимаю <a class="link" href="">Условия договора</a></p>
                 </label>
                 <button class="submit-btn button" type="submit">Отправить</button>
             </form>
@@ -121,12 +122,16 @@
             </div>
         </div>
     </header>
-    <section class="hero section">
-        <div class="container">
-            <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-            <a class="button link" href="">Заказать услугу</a>
-        </div>
-    </section>
+    <div class="bg-img-wrapper">
+        <section class="hero section">
+            <div class="container">
+    
+                <h1 class="title">Эффективные решения для вашего бизнеса</h1>
+                <a class="button link" href="">Заказать услугу</a>
+            </div>
+        </section>  
+    </div>
+    
     <section class="features section">
         <div class="container">
             <h2 class="title">Особености</h2>
@@ -423,10 +428,10 @@
             var body = document.getElementById("body");
             if (open) {
                 burger.classList.add("open")
-                body.classList.add("overflow");
+                body.classList.add("overflow-burger");
             } else {
                 burger.classList.remove("open");
-                body.classList.remove("overflow");
+                body.classList.remove("overflow-burger");
             }
         }
 
@@ -435,10 +440,10 @@
             var body = document.getElementById("body");
             if (open) {
                 modal.classList.add("open")
-                body.classList.add("overflow");
+                body.classList.add("overflow-modal");
             } else {
                 modal.classList.remove("open");
-                body.classList.remove("overflow");
+                body.classList.remove("overflow-modal");
             }
         }
     </script>

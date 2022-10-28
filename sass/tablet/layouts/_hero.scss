@@ -1,9 +1,11 @@
-.hero {
-    background-image: url(../../images/Header-tablet\ img.jpg);
+.bg-img-wrapper {
+    background-image: url(../../images/hero-bg-tablet\ img.jpg);
 
-    & .container {
-        max-width: 360px;
-        min-width: 360px;
-        height: 164px;
+    & .hero {
+        & .container {
+            max-width: 360px;
+            min-width: 360px;
+            height: 164px;
+        }
     }
 }
