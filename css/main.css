@@ -187,27 +187,31 @@ body {
 
 .modal {
   position: fixed;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: -100%;
   z-index: 35;
-  max-width: 450px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  left: 0;
+  top: -100%;
+  transform: translate(0, -50%);
+  width: 100%;
+  padding: 0 15px;
   transition: linear;
   transition-property: top, transform;
   transition-duration: 250ms;
 }
 .modal.open {
-  transform: translate(-50%, -50%);
   top: 50%;
 }
-.modal > .wrapper {
+.modal > .box {
+  margin: 0 auto;
+  max-width: 450px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal > .box > .wrapper {
   position: relative;
   padding: 40px;
 }
-.modal > .wrapper .close-modal-icon {
+.modal > .box > .wrapper .close-modal-icon {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -215,24 +219,24 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
-.modal > .wrapper .close-modal-icon:hover, .modal > .wrapper .close-modal-icon:focus {
+.modal > .box > .wrapper .close-modal-icon:hover, .modal > .box > .wrapper .close-modal-icon:focus {
   fill: #2196F3;
 }
-.modal > .wrapper .title {
+.modal > .box > .wrapper .title {
   margin-bottom: 12px;
 }
-.modal > .wrapper .wrapper {
+.modal > .box > .wrapper .wrapper {
   position: relative;
   display: flex;
   flex-direction: column-reverse;
 }
-.modal > .wrapper .wrapper + .wrapper {
+.modal > .box > .wrapper .wrapper + .wrapper {
   margin-top: 10px;
 }
-.modal > .wrapper .wrapper label {
+.modal > .box > .wrapper .wrapper label {
   margin-bottom: 4px;
 }
-.modal > .wrapper .wrapper input, .modal > .wrapper .wrapper textarea {
+.modal > .box > .wrapper .wrapper input, .modal > .box > .wrapper .wrapper textarea {
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -246,19 +250,19 @@ body {
   transition-property: border-color;
   transition-duration: 250ms;
 }
-.modal > .wrapper .wrapper input:focus, .modal > .wrapper .wrapper textarea:focus {
+.modal > .box > .wrapper .wrapper input:focus, .modal > .box > .wrapper .wrapper textarea:focus {
   border-color: #2196F3;
 }
-.modal > .wrapper .wrapper input:focus ~ .input-icon, .modal > .wrapper .wrapper textarea:focus ~ .input-icon {
+.modal > .box > .wrapper .wrapper input:focus ~ .input-icon, .modal > .box > .wrapper .wrapper textarea:focus ~ .input-icon {
   fill: #2196F3;
 }
-.modal > .wrapper .wrapper input:focus ~ label, .modal > .wrapper .wrapper textarea:focus ~ label {
+.modal > .box > .wrapper .wrapper input:focus ~ label, .modal > .box > .wrapper .wrapper textarea:focus ~ label {
   color: #2196F3;
 }
-.modal > .wrapper .wrapper textarea {
+.modal > .box > .wrapper .wrapper textarea {
   padding-left: 12px;
 }
-.modal > .wrapper .wrapper .input-icon {
+.modal > .box > .wrapper .wrapper .input-icon {
   position: absolute;
   bottom: 11px;
   left: 12px;
@@ -267,29 +271,29 @@ body {
   transition-property: fill;
   transition-duration: 250ms;
 }
-.modal > .wrapper textarea {
+.modal > .box > .wrapper textarea {
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   min-height: 120px;
 }
-.modal > .wrapper input.standart-checkbox {
+.modal > .box > .wrapper input.standart-checkbox {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   position: absolute;
 }
-.modal > .wrapper input.standart-checkbox:checked + .agreement-label .checkbox {
+.modal > .box > .wrapper input.standart-checkbox:checked + .agreement-label .checkbox {
   background-color: #2196F3;
   border-color: #2196F3;
 }
-.modal > .wrapper .agreement-label {
+.modal > .box > .wrapper .agreement-label {
   display: flex;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
 }
-.modal > .wrapper .agreement-label .checkbox {
+.modal > .box > .wrapper .agreement-label .checkbox {
   background-image: url("../../../images/check_mark-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -358,14 +362,14 @@ body {
     font-size: 16px;
     line-height: 1.875;
   }
-  .modal > .wrapper .title {
+  .modal .box > .wrapper .title {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.5;
     letter-spacing: 0.03em;
     text-align: center;
   }
-  .modal > .wrapper label {
+  .modal .box > .wrapper label {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.167;
@@ -373,35 +377,35 @@ body {
     text-align: left;
     color: #757575;
   }
-  .modal > .wrapper label .link {
+  .modal .box > .wrapper label .link {
     color: #2196F3;
     text-decoration: none;
   }
-  .modal > .wrapper label .link:hover, .modal > .wrapper label .link:focus {
+  .modal .box > .wrapper label .link:hover, .modal .box > .wrapper label .link:focus {
     text-decoration: underline;
   }
-  .modal > .wrapper input::-moz-placeholder, .modal > .wrapper textarea::-moz-placeholder {
+  .modal .box > .wrapper input::-moz-placeholder, .modal .box > .wrapper textarea::-moz-placeholder {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.14;
     letter-spacing: 0.01em;
     text-align: left;
   }
-  .modal > .wrapper input:-ms-input-placeholder, .modal > .wrapper textarea:-ms-input-placeholder {
+  .modal .box > .wrapper input:-ms-input-placeholder, .modal .box > .wrapper textarea:-ms-input-placeholder {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.14;
     letter-spacing: 0.01em;
     text-align: left;
   }
-  .modal > .wrapper input, .modal > .wrapper input::placeholder, .modal > .wrapper textarea::placeholder {
+  .modal .box > .wrapper input, .modal .box > .wrapper input::placeholder, .modal .box > .wrapper textarea::placeholder {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.14;
     letter-spacing: 0.01em;
     text-align: left;
   }
-  .modal > .wrapper .submit-btn {
+  .modal .box > .wrapper .submit-btn {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
