@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio Студия</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="dist/css/portfolio.min.css" />
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <a class="logo" href="">
+          <svg class="logo-icon" width="134" height="28">
+            <use href="./images/sprite.svg#icon-WebStudio-logo-icon"></use>
+          </svg>
+        </a>
+        <svg
+          class="menu-icon"
+          onclick="toggle_burger(true)"
+          width="40"
+          height="40"
+        >
+          <use href="./images/sprite.svg#icon-mobile-menu-icon"></use>
+        </svg>
+
+        <div class="wrapper" id="burger-menu">
+          <nav class="header-nav">
+            <ul class="list">
+              <li class="item">
+                <a class="link" href="index.html">Студия</a>
+              </li>
+              <li class="item">
+                <a class="link special" href="portfolio.html">Портфолио</a>
+              </li>
+              <li class="item">
+                <a class="link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header-contacts list">
+            <li class="item" onclick="toggle_modal(true)">
+              <svg class="icon" width="14" height="14">
+                <use href="./images/sprite.svg#icon-envelope-icon"></use>
+              </svg>
+              <p class="text"><i class="mail icon"></i>info@devstudio.com</p>
+            </li>
+            <li class="item" onclick="toggle_modal(true)">
+              <svg class="icon" width="14" height="14">
+                <use href="./images/sprite.svg#icon-smartphone-icon"></use>
+              </svg>
+              <p class="text"><i class="phone icon"></i>+38 096 111 11 11</p>
+            </li>
+          </ul>
+
+          <ul class="addition-socials list">
+            <li class="item">
+              <a class="link" href="">Instagram</a>
+            </li>
+            <li class="item">
+              <a class="link" href="">Twitter</a>
+            </li>
+            <li class="item">
+              <a class="link" href="">Facebook</a>
+            </li>
+            <li class="item">
+              <a class="link" href="">LinkedIn</a>
+            </li>
+          </ul>
+
+          <svg
+            class="close-menu-icon"
+            onclick="toggle_burger(false)"
+            width="40"
+            height="40"
+          >
+            <use href="./images/sprite.svg#icon-close-icon"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <section class="portfolio-cards container">
+      <ul class="list">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+      </ul>
+    </section>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="wrapper-desktop">
+          <div class="wrapper-tablet">
+            <div class="addresses-block">
+              <a class="logo" href="">
+                <svg class="logo-icon" width="154" height="28">
+                  <use
+                    href="./images/sprite.svg#icon-WebStudio-logo-icon"
+                  ></use>
+                </svg>
+              </a>
+              <p class="text special">г. Киев, пр-т Леси Украинки, 26</p>
+              <p class="text">info@example.com</p>
+              <p class="text">+38 099 111 11 11</p>
+            </div>
+            <div class="socials-block">
+              <h3 class="title">присоединяйтесь</h3>
+              <ul class="list">
+                <li class="item">
+                  <a class="link" href="">
+                    <svg
+                      class="footer-social-icons icon"
+                      width="44"
+                      height="44"
+                    >
+                      <use href="./images/sprite.svg#icon-instagram-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a class="link" href="">
+                    <svg
+                      class="footer-social-icons icon"
+                      width="44"
+                      height="44"
+                    >
+                      <use href="./images/sprite.svg#icon-twitter-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a class="link" href="">
+                    <svg
+                      class="footer-social-icons icon"
+                      width="44"
+                      height="44"
+                    >
+                      <use href="./images/sprite.svg#icon-facebook-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a class="link" href="">
+                    <svg
+                      class="footer-social-icons icon"
+                      width="44"
+                      height="44"
+                    >
+                      <use href="./images/sprite.svg#icon-in-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-block">
+            <form class="form js-speaker-form" autocomplete="off">
+              <h3 class="title">Подпишитесь на рассылку</h3>
+              <div class="wrapper">
+                <input
+                  type="email"
+                  class="input"
+                  name="Email"
+                  placeholder="Email"
+                  autocomplete="email"
+                />
+                <button class="submit-btn button" type="submit">
+                  Подписаться
+                  <svg class="letter icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-send-icon"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggle_burger(open) {
+        var burger = document.getElementById("burger-menu");
+        var body = document.getElementById("body");
+        if (open) {
+          burger.classList.add("open");
+          body.classList.add("overflow-burger");
+        } else {
+          burger.classList.remove("open");
+          body.classList.remove("overflow-burger");
+        }
+      }
+
+      function toggle_modal(open) {
+        var modal = document.getElementById("modal");
+        var body = document.getElementById("body");
+        if (open) {
+          modal.classList.add("open");
+          body.classList.add("overflow-modal");
+        } else {
+          modal.classList.remove("open");
+          body.classList.remove("overflow-modal");
+        }
+      }
+    </script>
+
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+          });
+      })();
+    </script>
+  </body>
+</html>

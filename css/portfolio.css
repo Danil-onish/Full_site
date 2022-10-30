@@ -1140,4 +1140,50 @@ body {
   .page-footer .form-block .wrapper .submit-btn {
     margin-top: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+.portfolio-cards {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.portfolio-cards .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.portfolio-cards .list .item {
+  background-color: brown;
+  border: 1px solid black;
+}
+
+@media screen and (min-width: 0) {
+  .portfolio-cards .list .item {
+    width: 450px;
+    height: 404px;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .portfolio-cards .list .item:not(.portfolio-cards .list .item:nth-child(-n+1)) {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio-cards .list .item {
+    width: 354px;
+    height: 440px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .portfolio-cards .list .item:not(.portfolio-cards .list .item:nth-child(-n+2)) {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .portfolio-cards .list .item {
+    width: 370px;
+    height: 404px;
+  }
+  .portfolio-cards .list .item:not(.portfolio-cards .list .item:nth-child(-n+3)) {
+    margin-top: 30px;
+  }
+}/*# sourceMappingURL=portfolio.css.map */
