@@ -18,5 +18,8 @@
     "liveSassCompile.settings.generateMap": true,
     "liveSassCompile.settings.autoprefix": [
         "defaults"
-    ]
+    ],
+    "editor.tabSize": 3,
+    "files.autoSave": "onFocusChange",
+    "vscodeGoogleTranslate.preferredLanguage": "English"
 }
